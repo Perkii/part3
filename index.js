@@ -10,6 +10,7 @@ const logger = (request, response, next) => {
   next();
 };
 
+app.use(express.static("build"));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(logger);
